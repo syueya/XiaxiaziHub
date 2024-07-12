@@ -1,0 +1,41 @@
+[
+  {
+    "category_No": "1", 
+    "category_icon": "1.png",
+    "category_name": "示例1",
+    "items": [
+      {
+        "name": "1",
+        "icon": "1.png",
+        "href": "网址1",
+        "description": ""
+      },
+      {
+        "name": "2",
+        "icon": "2",
+        "href": "网址2",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "category_No": "2", 
+    "category_icon": "2.png",
+    "category_name": "示例2",
+    "items": [
+      {
+        "name": "3",
+        "icon": "3",
+        "href": "网址3",
+        "description": ""
+      },
+      {
+        "category_name": "实例2",
+        "name": "4",
+        "icon": "4",
+        "href": "网址4",
+        "description": ""
+      }
+    ]
+  }
+]

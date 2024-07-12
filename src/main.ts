@@ -6,7 +6,7 @@ import App from './App.vue'
 import router from './router'
 
 // 引入全局的 CSS 文件
-import './assets/css/common.css';
+import './assets/common.css';
 
 // 创建一个应用
 const app = createApp(App)
