@@ -1,0 +1,78 @@
+
+.navbar {
+    height: 70px;      /*    高度为 70 像素     */
+    background-image: linear-gradient(45deg, gray, white);      /*   创建了一个从灰色到白色渐变的背景图像，并且这个渐变是在 45 度角方向上的      */
+    border-radius: 10px;      /*  为元素的边框添加一个 10 像素的圆角       */
+    box-shadow: 0 0 2px;      /*   创建一个淡色、宽度为 2 像素的边框阴影      */
+    display: flex;          /* 启用Flexbox布局 */
+    align-items: center;    /* 交叉轴对齐方式：垂直居中 */
+    justify-content: space-between; /* 左右对齐 */
+    word-spacing: 5px;      /*    文本单词之间增加 5 像素的间距     */  
+} 
+
+
+/*  侧边栏主体  */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  font-size: .85em;
+  padding: 5px 5px 8px 5px;   /*  上、右、下、左  */ 
+  width: 180px;
+  height: calc(100vh - 3.6rem);
+  background-color: #FFFFFF;
+  overflow-y: scroll;  /* overflow 控制元素内容溢出时如何处理 */
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
+/* 侧边栏滚动条 */
+.sidebar::-webkit-scrollbar {
+  width: 5px;  /* 设置滚动条的宽f度 */
+  background-color: #FFFFFF;  /* 设置滚动条背景颜色 */
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #E1E1E1;  /* 设置滚动条的颜色 */
+}
+
+/* 侧边栏链接 */
+.sidebar a {
+  font-weight: 400;
+  display: block;
+  color: #00323c;
+  padding: .35rem 1rem .35rem 1rem;
+  line-height: 1.4;
+  text-decoration: none;
+  border-left: .25rem solid transparent;  /*左边框样式 */
+  cursor: default; /* 鼠标为默认箭头指针 */
+}
+
+/*  鼠标悬停时状态  */
+.sidebar a:hover:not(.active) {
+  border-left-color: #11a8cd;
+  color: #11a8cd;
+  font-weight: bold;
+  cursor: default; /* 鼠标为默认箭头指针 */
+}
+
+
+
+.main-content {
+  position: fixed;
+  top: 70px;
+  display: flex;
+  margin-left: 180px; /* 与 侧边栏 的宽度相同*/
+  width: calc(100vw - 182px);
+  height: calc(100vh - 70px); /* 100vh 表示视口高度的百分比（vh 单位表示视口高度的1%）*/
+  background-color: #F4F4F4;
+  border: 1px solid;
+}
+
+
+/* 侧边栏滚动条 */
+.main-content::-webkit-scrollbar {
+  width: 5px;  /* 设置滚动条的宽度 */
+  background-color: #FFFFFF;  /* 设置滚动条背景颜色 */
+}
+.main-content::-webkit-scrollbar-thumb {
+  background-color: #D0D0D0;  /* 设置滚动条的颜色 */
+}

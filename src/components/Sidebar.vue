@@ -1,13 +1,13 @@
 <template>
-    <div class="siderbar">
-    </div>
+
   
-  </template>
+</template>
   
-  <script setup lang="ts" name="Siderbar">
+<script setup lang="ts" name="Siderbar">
     
-  </script>
+</script>
   
-  <style scoped>
-  
-  </style>
+<style scoped>
+
+
+</style>

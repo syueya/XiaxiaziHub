@@ -74,7 +74,6 @@ th, td {
   line-height: 40px;
   text-align: center;
   color: #18373D;
-  float: right;
   cursor: pointer;
   font-size: 24px; /* 设置字体大小为 24 像素，你可以根据需求调整大小 */
 }

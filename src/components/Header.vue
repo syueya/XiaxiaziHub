@@ -1,38 +1,31 @@
 <template>
+  <!--图标和标题-->
   <div class="branding">
     <img src="/logo.ico" alt="logo" class="logo-icon">
     <h2 class="logo-title">夏夏子导航</h2>
   </div>
 
+  <!--搜索框-->
+  <div class="search-box">
+    <input aria-label="Search" autocomplete="off" spellcheck="false">
+    <div class="search-results" id="searchResults">
+    <!--搜索结果-->
+    </div>
+  </div>
+
+  <!-- 导航区 -->
+  <div class="navigate">
+    <RouterLink replace to="/home" active-class="active">主页</RouterLink>
+    <RouterLink replace :to="{name:'xinwen'}" active-class="active">分类管理</RouterLink>
+    <RouterLink replace :to="{path:'/about'}" active-class="active">卡片列表</RouterLink>
+  </div>
+
 </template>
 
 <script setup lang="ts" name="Header">
-  
+    import {RouterLink} from 'vue-router'
 </script>
 
 <style scoped>
-  .branding {
-
-    display: flex;          /* 启用Flexbox布局 */
-    justify-content: flex-start;   /* 主轴对齐方式：左对齐 */
-    align-items: center;    /* 交叉轴对齐方式：垂直居中 */
-
- 
-    word-spacing: 5px;
-    margin: 30px 0;
-    height: 70px;
-    line-height: 70px;
-    background-image: linear-gradient(45deg, gray, white);
-    border-radius: 10px;
-    box-shadow: 0 0 2px;
-    font-size: 24px;
-  }
-
-  .logo-icon {
-    height: 50px; 
-    width: auto;
-    margin-left: 10px; /* 与标题保持一定间距 */
-    margin-right: 10px; /* 与标题保持一定间距 */
-  }
-
+  @import '../assets/css/header.css';
 </style>

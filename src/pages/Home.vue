@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
-    <img src="http://www.atguigu.com/images/index_new/logo.png" alt="">
+  <div id="layout-groups" class="layout-pages">
+    <!-- JS脚本将会在这里生成书签列表 -->
+     <h2>test</h2>
   </div>
 </template>
 

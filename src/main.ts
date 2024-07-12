@@ -5,6 +5,9 @@ import App from './App.vue'
 // 引入路由器
 import router from './router'
 
+// 引入全局的 CSS 文件
+import './assets/css/common.css';
+
 // 创建一个应用
 const app = createApp(App)
 // 使用路由器
