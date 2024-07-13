@@ -1,0 +1,95 @@
+.search-box {
+  margin-left: auto; /* 将元素的左外边距设置为 auto，这会将元素推到容器的右侧，达到右对齐的效果 */
+  margin-right: 20px; /* 右外边距为 20 像素 */
+}
+
+/* 搜索框 */
+.search-box input {
+    cursor: text;
+    width: 10rem;
+    height: 2rem;
+    color: #4e6e8e;
+    display: inline-block;
+    border: 1px solid #cfd4db;
+    border-radius: 2rem;
+    font-size: .9rem;
+    line-height: 2rem;
+    padding: 0 .5rem 0 2rem;
+    outline: none;  /* 移除元素轮廓样式的属性 */
+    transition: all .2s ease; /* 元素在属性变化时会以持续时间为 0.2 秒的动画方式平滑过渡到新的状态。 */
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='13'%3E%3Cg stroke-width='2' stroke='%23aaa' fill='none'%3E%3Cpath d='M11.29 11.71l-4-4'/%3E%3Ccircle cx='5' cy='5' r='4'/%3E%3C/g%3E%3C/svg%3E") .6rem .5rem no-repeat; /* #fff 表示背景颜色为白色，url("") 表示一个搜索的背景图像，.6rem .5rem 表示背景图像的位置偏移为水平方向上 0.6rem、垂直方向上 0.5rem，no-repeat 表示不要重复平铺背景图像。 */
+    background-size: 1rem; /*  背景图像的宽度和高度都被设置为 1rem。 */
+}
+
+/* 搜索结果 */
+.search-results {
+    position: fixed;
+    top: 70px;
+    right: 8px;
+    display: none; /* 初始隐藏搜索结果 */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 380px; /* 宽度 */
+    background-color: #FFFFFF; /* 背景颜色，根据需要进行调整 */
+    border: 1px solid #CFD4DB; /* 边框样式，根据需要进行调整 */
+    max-height: 500px; /* 你想要的最大高度 */
+    overflow-y: scroll; /* 启用垂直滚动条 */
+    z-index: 1000;  /* 显示在上方 */
+}
+    
+/* 搜索结果滚动条 */
+.search-results::-webkit-scrollbar {
+    width: 5px;  /* 设置滚动条的宽f度 */
+    background-color: #FFFFFF;  /* 设置滚动条背景颜色 */
+}
+.search-results::-webkit-scrollbar-thumb {
+    background-color: #E1E1E1;  /* 设置滚动条的颜色 */
+}
+  
+  
+  
+.search-result {
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 5px 0px 5px;
+}
+
+
+.search-bookmark{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden; /* 超出隐藏，以防止内容溢出容器 */
+  text-overflow: ellipsis; /* 超出省略号显示，以示内容被隐藏 */
+  padding: 0px 5px 0px 5px;
+  color: #415B75; /* 设置链接文本的颜色 */
+  text-decoration: none; /* 取消下划线 */
+  font-size: 13px;
+  line-height: 16px; /* 行高 */
+}
+
+
+  /* 设置鼠标悬停时样式 */
+.search-bookmark:hover {
+    font-weight: bold;  /* 加粗 */
+    color: #415B75; /* 颜色 */
+}
+
+  
+.search-bookmark-description {
+  overflow: hidden; /* 超出隐藏，以防止内容溢出容器 */
+  text-overflow: ellipsis; /* 超出省略号显示，以示内容被隐藏 */
+  padding: 0px 5px 0px 5px;
+  float: right;  /* 描述靠右 */
+  color: #64748B; /* 颜色 */
+}
+
+      
+    
+/* 搜索汇总 */
+.search-count {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}

@@ -6,12 +6,7 @@
   </div>
 
   <!--搜索框-->
-  <div class="search-box">
-    <input aria-label="Search" autocomplete="off" spellcheck="false">
-    <div class="search-results" id="searchResults">
-      <!--搜索结果-->
-    </div>
-  </div> 
+  <Homesearch/>
 
   <!-- 导航区 -->
   <div class="navigate">
@@ -24,7 +19,7 @@
 
 <script setup lang="ts" name="Header">
     import {RouterLink} from 'vue-router'
-    
+    import Homesearch from '../components/Homesearch.vue'
 </script>
 
 <style scoped>
