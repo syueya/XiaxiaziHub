@@ -1,16 +1,4 @@
 
-.search-idColumn, .search-nameColumn {
-  overflow: hidden; /* 超出隐藏，以防止内容溢出容器 */
-  text-overflow: ellipsis; /* 超出省略号显示，以示内容被隐藏 */
-  padding: .35rem .35rem .35rem .35rem;
-  color: #415B75; /* 设置链接文本的颜色 */
-  font-weight: bold;  /* 加粗 */
-  text-decoration: none; /* 取消下划线 */
-  font-size: .8rem;
-  line-height: 1rem; /* 行高 */
-}
-
-
 /* 文字说明 */
 .toolbar-text-1 {
   background-color: #FFFFFF;

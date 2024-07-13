@@ -9,21 +9,22 @@
   <div class="search-box">
     <input aria-label="Search" autocomplete="off" spellcheck="false">
     <div class="search-results" id="searchResults">
-    <!--搜索结果-->
+      <!--搜索结果-->
     </div>
-  </div>
+  </div> 
 
   <!-- 导航区 -->
   <div class="navigate">
-    <RouterLink replace to="/home" active-class="active">主页</RouterLink>
-    <RouterLink replace :to="{name:'xinwen'}" active-class="active">分类管理</RouterLink>
-    <RouterLink replace :to="{path:'/about'}" active-class="active">卡片列表</RouterLink>
+    <RouterLink replace to="/" active-class="active">主页</RouterLink>
+    <RouterLink replace to="/category" active-class="active">分类管理</RouterLink>
+    <RouterLink replace to="/card" active-class="active">卡片列表</RouterLink>
   </div>
 
 </template>
 
 <script setup lang="ts" name="Header">
     import {RouterLink} from 'vue-router'
+    
 </script>
 
 <style scoped>

@@ -22,7 +22,6 @@
   background-color: #FFFFFF;
   overflow-y: scroll;  /* overflow 控制元素内容溢出时如何处理 */
   box-sizing: border-box;
-  border: 1px solid;
 }
 
 /* 侧边栏滚动条 */
@@ -35,7 +34,7 @@
 }
 
 /* 侧边栏链接 */
-.sidebar a {
+.category_siderbar {
   font-weight: 400;
   display: block;
   color: #00323c;
@@ -47,7 +46,7 @@
 }
 
 /*  鼠标悬停时状态  */
-.sidebar a:hover:not(.active) {
+.category_siderbar:hover:not(.active) {
   border-left-color: #11a8cd;
   color: #11a8cd;
   font-weight: bold;
@@ -64,7 +63,6 @@
   width: calc(100vw - 182px);
   height: calc(100vh - 70px); /* 100vh 表示视口高度的百分比（vh 单位表示视口高度的1%）*/
   background-color: #F4F4F4;
-  border: 1px solid;
 }
 
 
