@@ -26,37 +26,8 @@
             </div>
           </div>
           <!-- 表格 -->
-          <table id="myTable-card">
-            <thead>
-            <tr>
-              <th>选择</th>
-              <th>所属分类</th>
-              <th>名称</th>
-              <th>图标</th>
-              <th>链接</th>
-              <th>描述</th>
-              <th>操作</th>
-            </tr>
-            </thead>
-              <tbody id="tableBody-card">
-                <tr v-for="(bookmark, index) in bookmarksWithCategoryName" :key="bookmark.href">
-                  <td>
-                    <input type="checkbox">
-                  </td>
-                  <td>{{ bookmark.category_name }}</td>
-                  <td>{{ bookmark.name }}</td>
-                  <td>{{ bookmark.icon }}</td>
-                  <td>{{ bookmark.href }}</td>
-                  <td>{{ bookmark.description }}</td>
-                  <td>
-                    <button @click="editItem(bookmark)" class="edit-button-card">编辑</button>
-                    <button @click="deleteItem(bookmark)" class="delete-button-card">删除</button>
-                  </td>
-                </tr>
-              </tbody>
+          <TableBookmark/>
 
-
-            </table>
         </div>
       </div>
     </main>
@@ -115,18 +86,27 @@
   import EditSave from '../components/EditSave.vue'
   import DelSave from '../components/DelSave.vue'
   import MultiDelModal from '../components/MultiDelModal.vue'
+  import TableBookmark from '../components/Table-bookmark.vue'
+
   import { useBookmarks } from '../types/bookmarks.ts';
+  const { jsonData} = useBookmarks();
 
-  const { jsonData, itemsArray } = useBookmarks();
 
-  const bookmarksWithCategoryName = jsonData.value.flatMap(category => {
-  return category.items.map(item => {
-    return {
-      ...item,
-      category_name: category.category_name
+  const handleCategoryChange = () => {
+        // 处理编辑逻辑
+
+        }
+
+    const addCard = () => {
+        // 处理删除逻辑
+
     }
-  })
-})
+
+    const deleteSelectedCards = () => {
+        // 处理删除逻辑
+
+    }
+
 
 </script>
 

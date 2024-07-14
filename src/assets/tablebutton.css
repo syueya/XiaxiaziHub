@@ -1,0 +1,12 @@
+/* 编辑按钮 */
+.edit-button {
+    background-color: #2D8CF0;
+    color: white;
+  }
+  
+  /* 删除按钮 */
+  .delete-button {
+    background-color: #ED4014;
+    color: white;
+  }
+  
