@@ -1,9 +1,5 @@
 <template>
     <label>
-        序号:
-        <input type="text" id="add_categoryNoInput">
-    </label>
-    <label>
         ID:
         <input type="text" id="add_categoryIdInput">
     </label>

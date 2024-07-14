@@ -15,7 +15,6 @@
           <thead>
             <tr>
               <th>选择</th>
-              <th>序号</th>
               <th>ID</th>
               <th>名称</th>
               <th>图标</th>
@@ -23,6 +22,18 @@
             </tr>
           </thead>
           <tbody id="tableBody-category">
+            <tr v-for="category in jsonData" :key="category.category_No">
+              <td>
+                <input type="checkbox">
+              </td>
+              <td>{{ category.category_No }}</td>
+              <td>{{ category.category_name }}</td>
+              <td>{{ category.category_icon }}</td>
+              <td>
+                <button @click="editItem(item)" class="edit-button-category">编辑</button>
+                <button @click="deleteItem(item)" class="delete-button-category">删除</button>
+              </td>
+            </tr>
             <!-- 表格行将通过数据动态生成 -->
           </tbody>
         </table>
@@ -90,6 +101,24 @@
   import EditSave from '../components/EditSave.vue'
   import DelSave from '../components/DelSave.vue'
   import MultiDelModal from '../components/MultiDelModal.vue'
+  import { useBookmarks } from '../types/bookmarks.ts';
+
+  const { jsonData, itemsArray } = useBookmarks();
+
+
+  const editItem = (item) => {
+      // 处理编辑逻辑
+      console.log('Editing item:', item)
+    }
+
+  const deleteItem = (item) => {
+    // 处理删除逻辑
+    console.log('Deleting item:', item)
+  }
+
+
+
+
 </script>
 
 <style scoped>

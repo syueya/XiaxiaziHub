@@ -15,14 +15,7 @@
   
   <script setup lang="ts">
     import BookmarkItem from "./BookmarkItem.vue";
-    defineProps<{
-        category: {
-        category_No: number;
-        category_name: string;
-        category_icon: string;
-        items: any[];
-        };
-    }>();
+
   </script>
 
 <style>

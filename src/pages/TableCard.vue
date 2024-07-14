@@ -38,7 +38,22 @@
             </tr>
             </thead>
               <tbody id="tableBody-card">
-            </tbody>
+                <tr v-for="bookmark in itemsArray" :key="bookmark.name">
+                <td>
+                  <input type="checkbox">
+                </td>
+                <td></td>
+                <td></td>
+                <td>{{ bookmark.name }}</td>
+                <td>{{ bookmark.icon }}</td>
+                <td>{{ bookmark.href }}</td>
+                <td>{{ bookmark.description }}</td>
+                <td>
+                  <button @click="editItem(item)" class="edit-button-card">编辑</button>
+                  <button @click="deleteItem(item)" class="delete-button-card">删除</button>
+                </td>
+              </tr>
+              </tbody>
           </table>
         </div>
       </div>
@@ -98,6 +113,9 @@
   import EditSave from '../components/EditSave.vue'
   import DelSave from '../components/DelSave.vue'
   import MultiDelModal from '../components/MultiDelModal.vue'
+  import { useBookmarks } from '../types/bookmarks.ts';
+
+  const { jsonData, itemsArray } = useBookmarks();
 
 </script>
 
