@@ -119,10 +119,10 @@
 
 
 
-/* 选择表格中的第6和第7列，并将其最大宽度设置为200像素。如果内容超过该宽度，溢出部分将被隐藏并显示省略号。*/
-#myTable-card td:nth-child(6),
-#myTable-card td:nth-child(7) {
-  max-width: 200px;
+/* 选择表格中的第5和第6列，并将其最大宽度设置为300像素。如果内容超过该宽度，溢出部分将被隐藏并显示省略号。*/
+#myTable-card td:nth-child(5),
+#myTable-card td:nth-child(6) {
+  max-width: 300px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

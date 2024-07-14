@@ -10,8 +10,10 @@
               <div class="category-select-all" aria-label="所属分类">
                 <!-- 选择框 -->
                 <select id="category-select" @change="handleCategoryChange">
-                  <option value="">请选择</option>
-                  <!-- 其他选项根据需要添加 -->
+                  <option value="">请选择类别</option>
+                  <option v-for="category in jsonData" :key="category.category_No" :value="category.category_name">
+                    {{ category.category_name }}
+                  </option>
                 </select>
                 <span class="arrow">&#9660;</span>
               </div>
@@ -28,7 +30,6 @@
             <thead>
             <tr>
               <th>选择</th>
-              <th>序号</th>
               <th>所属分类</th>
               <th>名称</th>
               <th>图标</th>
@@ -38,23 +39,24 @@
             </tr>
             </thead>
               <tbody id="tableBody-card">
-                <tr v-for="bookmark in itemsArray" :key="bookmark.name">
-                <td>
-                  <input type="checkbox">
-                </td>
-                <td></td>
-                <td></td>
-                <td>{{ bookmark.name }}</td>
-                <td>{{ bookmark.icon }}</td>
-                <td>{{ bookmark.href }}</td>
-                <td>{{ bookmark.description }}</td>
-                <td>
-                  <button @click="editItem(item)" class="edit-button-card">编辑</button>
-                  <button @click="deleteItem(item)" class="delete-button-card">删除</button>
-                </td>
-              </tr>
+                <tr v-for="(bookmark, index) in bookmarksWithCategoryName" :key="bookmark.href">
+                  <td>
+                    <input type="checkbox">
+                  </td>
+                  <td>{{ bookmark.category_name }}</td>
+                  <td>{{ bookmark.name }}</td>
+                  <td>{{ bookmark.icon }}</td>
+                  <td>{{ bookmark.href }}</td>
+                  <td>{{ bookmark.description }}</td>
+                  <td>
+                    <button @click="editItem(bookmark)" class="edit-button-card">编辑</button>
+                    <button @click="deleteItem(bookmark)" class="delete-button-card">删除</button>
+                  </td>
+                </tr>
               </tbody>
-          </table>
+
+
+            </table>
         </div>
       </div>
     </main>
@@ -116,6 +118,15 @@
   import { useBookmarks } from '../types/bookmarks.ts';
 
   const { jsonData, itemsArray } = useBookmarks();
+
+  const bookmarksWithCategoryName = jsonData.value.flatMap(category => {
+  return category.items.map(item => {
+    return {
+      ...item,
+      category_name: category.category_name
+    }
+  })
+})
 
 </script>
 
