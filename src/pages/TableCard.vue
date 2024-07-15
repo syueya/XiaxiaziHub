@@ -32,60 +32,15 @@
       </div>
     </main>
 
-    <!-- 添加模态框 -->
-    <div class="modal" id="add_Modal-card" >
-      <div class="modal-content"  id="add_modal-content-card">
-        <span class="close" id="add_close-card">&times;</span>
-        <label>请输入你要添加的网页:</label>
-        <CardModal/>
-        <button class="saveButton" id="add_saveButton-card">保存</button>
-      </div>
-    </div>
 
-    <!-- 添加模态框的保存模态框 -->
-    <AddSave/>
 
-  <!-- 编辑模态框 -->
-  <div  class="modal" id="edit_Modal-card">
-    <div class="modal-content" id="edit_modal-content-card">
-      <span class="close" id="edit_close-card">&times;</span>
-        <label>
-          请修改你要编辑的分类:
-        </label>
-        <CardModal/>
-        <button class="saveButton" id="edit_saveButton">保存</button>
-      </div>
-    </div>
 
-    <!-- 编辑模态框的保存模态框 -->
-    <EditSave/>
-
-  <!-- 删除模态框 -->
-  <div  class="modal" id="del_Modal-card">
-    <div class="modal-content" id="del_modal-content-card">
-      <span class="close" id="del_close-card">&times;</span>
-      <label>
-        你真的要删除这个网页吗？
-      </label>
-      <CardModal/>
-      <button class="saveButton" id="del_saveButton-card">确定</button>
-    </div>
-  </div>
-
-  <!-- 删除模态框的保存模态框 -->
-  <DelSave/>
-
-  <!-- 批量删除及保存模态框 -->
-  <MultiDelModal/>
   
 </template>
 
 <script setup lang="ts" name="TableCard">
   import CardModal from '../components/CardModal.vue'
-  import AddSave from '../components/AddSave.vue'
-  import EditSave from '../components/EditSave.vue'
-  import DelSave from '../components/DelSave.vue'
-  import MultiDelModal from '../components/MultiDelModal.vue'
+
   import TableBookmark from '../components/Table-bookmark.vue'
 
   import { useBookmarks } from '../types/bookmarks.ts';

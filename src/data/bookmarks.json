@@ -15,30 +15,6 @@
         "icon": "2.png",
         "href": "网址2",
         "description": "说明2"
-      },
-      {
-        "name": "13",
-        "icon": "1.png",
-        "href": "网址3",
-        "description": "说明1"
-      },
-      {
-        "name": "14",
-        "icon": "2.png",
-        "href": "网址4",
-        "description": "说明2"
-      },
-      {
-        "name": "15",
-        "icon": "1.png",
-        "href": "网址5",
-        "description": "说明1"
-      },
-      {
-        "name": "16",
-        "icon": "2.png",
-        "href": "网址6",
-        "description": "说明2"
       }
     ]
   },
@@ -57,18 +33,6 @@
         "name": "22",
         "icon": "4.png",
         "href": "网址8",
-        "description": "说明4"
-      },
-      {
-        "name": "23",
-        "icon": "3.png",
-        "href": "网址9",
-        "description": "说明3"
-      },
-      {
-        "name": "24",
-        "icon": "4.png",
-        "href": "网址10",
         "description": "说明4"
       }
       

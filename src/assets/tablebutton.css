@@ -9,4 +9,25 @@
     background-color: #ED4014;
     color: white;
   }
+
+/* 关闭弹窗按钮 */
+.closeButton {
+  display: inline-block;
+  position: absolute;
+  top: 1px;        /* 与模态框顶部的距离 */
+  right: 1px;      /* 与模态框右侧的距离 */
+  padding:0px;
+  margin:0px;
+  font-size: 24px;  /* 字体大小，可以根据需要调整 */
+  cursor: pointer;  /* 鼠标悬停时显示手形图标 */
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #fff;
+
+}
+.closeButton:hover,
+.closeButton:focus {
+  background-color: #CD2739;
+}
   
