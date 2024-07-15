@@ -1,19 +1,16 @@
 <template>
     <label>
-        序号:
-        <input type="text" v-model="no">
+      序号:
+      <input type="text" v-model="no">
     </label>
-    <div class="category-modal">
-      <label>
-        名称:
-        <input type="text" v-model="name">
-      </label>
-      <label>
-        图标:
-        <input type="text" v-model="icon">
-      </label>
-
-    </div>
+    <label>
+      名称:
+      <input type="text" v-model="name">
+    </label>
+    <label>
+      图标:
+      <input type="text" v-model="icon">
+    </label>
   </template>
   
 <script setup lang="ts">

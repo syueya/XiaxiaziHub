@@ -10,13 +10,13 @@
             </tr>
         </thead>
         <tbody id="tableBody-category">
-            <tr v-for="category in jsonData" :key="category.category_No">
+            <tr v-for="category in jsonData" :key="category.categoryNo">
             <td>
                 <input type="checkbox">
             </td>
-            <td>{{ category.category_No }}</td>
-            <td>{{ category.category_name }}</td>
-            <td>{{ category.category_icon }}</td>
+            <td>{{ category.categoryNo }}</td>
+            <td>{{ category.categoryName }}</td>
+            <td>{{ category.categoryIcon }}</td>
             <td>
                 <button @click="editItem" class="edit-button">编辑</button>
                 <button @click="deleteItem" class="delete-button">删除</button>

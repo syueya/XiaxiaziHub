@@ -1,10 +1,10 @@
 <template>
   <!-- 添加模态框 -->
-  <div class="modal" id="add_Modal" >
-    <div class="modal-content"  id="add_modal-content">
+  <div class="modal">
+    <div class="modal-content">
       <button class="closeButton" @click="close">&times;</button>
       <label>
-        请输入你要添加的分类:
+        请输入你要添加的内容:
       </label>
 
       <CategoryModal 
@@ -60,9 +60,9 @@
       return;
     }
     const newCategory = {
-      category_No: categoryNo.value,
-      category_icon: categoryIcon.value,
-      category_name: categoryName.value,
+      categoryNo: categoryNo.value,
+      categoryIcon: categoryIcon.value,
+      categoryName: categoryName.value,
       items: [] // 初始为空
     };
     addNewCategory(newCategory);

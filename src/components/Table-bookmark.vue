@@ -17,7 +17,7 @@
             <td>
             <input type="checkbox">
             </td>
-            <td>{{ bookmark.category_name }}</td>
+            <td>{{ bookmark.categoryName }}</td>
             <td>{{ bookmark.name }}</td>
             <td>{{ bookmark.icon }}</td>
             <td>{{ bookmark.href }}</td>
@@ -41,7 +41,7 @@
     return category.items.map(item => {
       return {
         ...item,
-        category_name: category.category_name
+        categoryName: category.categoryName
       }
     })
   })

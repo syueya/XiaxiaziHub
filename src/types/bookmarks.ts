@@ -5,9 +5,9 @@ import data from '../data/bookmarks.json';
 
 // 定义数据中每个类别的类型
 type CategoryType = {
-  category_No: string;
-  category_icon: string;
-  category_name: string;
+  categoryNo: string;
+  categoryIcon: string;
+  categoryName: string;
   items: ItemType[];
 };
 

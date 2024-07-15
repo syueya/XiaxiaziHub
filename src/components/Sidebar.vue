@@ -1,10 +1,10 @@
 <template>
     <ul>
       <!-- 遍历jsonData数组 -->
-      <li v-for="category in jsonData" :key="category.category_No">
+      <li v-for="category in jsonData" :key="category.categoryNo">
         <!-- 使用模板字符串绑定点击事件 -->
-        <div @click="scrollToCategory(category.category_name)" class="category_siderbar">
-            {{ category.category_name }}
+        <div @click="scrollToCategory(category.categoryName)" class="category_siderbar">
+            {{ category.categoryName }}
         </div>
       </li>
     </ul>

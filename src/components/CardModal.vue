@@ -25,9 +25,5 @@
 
 <script lang="ts" setup name="CardModal">
 
+
 </script>
-
-
-<style scoped>
-
-</style>

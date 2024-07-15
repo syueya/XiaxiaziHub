@@ -6,12 +6,12 @@
     <div class="main-content">
       <div id="layout-groups" class="layout-pages">
         <ul>
-          <li v-for="category in jsonData" :key="category.category_No">
-            <div class="bookmark-group" :id="category.category_name">
+          <li v-for="category in jsonData" :key="category.categoryNo">
+            <div class="bookmark-group" :id="category.categoryName">
               <div class="group">
                   <!-- 类图标 -->
-                  <img :src="`src/images/${category.category_icon}`" alt="icon" class="bookmark-group-icon">
-                  <h2 class="bookmark-group-name">{{ category.category_name }}</h2>
+                  <img :src="`src/images/${category.categoryIcon}`" alt="icon" class="bookmark-group-icon">
+                  <h2 class="bookmark-group-name">{{ category.categoryName }}</h2>
               </div>
               <div class="bookmark-list-area">
                 <div class="bookmark-list" v-for="item in category.items" :key="item.href">

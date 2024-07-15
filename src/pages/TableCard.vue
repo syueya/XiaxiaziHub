@@ -11,8 +11,8 @@
                 <!-- 选择框 -->
                 <select id="category-select" @change="handleCategoryChange">
                   <option value="">请选择类别</option>
-                  <option v-for="category in jsonData" :key="category.category_No" :value="category.category_name">
-                    {{ category.category_name }}
+                  <option v-for="category in jsonData" :key="category.categoryNo" :value="category.categoryName">
+                    {{ category.categoryName }}
                   </option>
                 </select>
                 <span class="arrow">&#9660;</span>
