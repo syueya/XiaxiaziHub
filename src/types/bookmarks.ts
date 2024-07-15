@@ -2,6 +2,7 @@
 import { ref, watchEffect } from 'vue';
 import data from '../data/bookmarks.json';
 
+
 // 定义数据中每个类别的类型
 type CategoryType = {
   category_No: string;
@@ -38,10 +39,24 @@ export function useBookmarks() {
     writeJsonToFile();
   };
 
-  const writeJsonToFile = () => {
-    console.log('写入JSON数据到文件：', jsonData.value);
-    // 实际环境中的文件写入逻辑
+  const EditCategory = (newCategory: CategoryType) => {
+    jsonData.value.push(newCategory);
+    itemsArray.value = jsonData.value.flatMap(category => category.items);
+    writeJsonToFile();
   };
 
-  return { jsonData, itemsArray, addNewCategory };
+  const DelCategory = (newCategory: CategoryType) => {
+    jsonData.value.push(newCategory);
+    itemsArray.value = jsonData.value.flatMap(category => category.items);
+    writeJsonToFile();
+  };
+
+  const writeJsonToFile = async () => {
+    console.log('写入JSON数据到文件: ', jsonData.value);
+  
+  };
+  
+  
+
+  return { jsonData, itemsArray, addNewCategory, EditCategory, DelCategory };
 }

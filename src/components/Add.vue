@@ -52,7 +52,7 @@
   const handleUpdateNo = (value) => {
     categoryNo.value = value;
   };
-  console.log('新分类:', categoryName.value);
+
 
   const saveButton = () => {
     if (!categoryName.value || !categoryNo.value) {

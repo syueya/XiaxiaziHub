@@ -2,23 +2,23 @@
 
     <label>
         所属分类:
-        <input type="text" id="add_categoryInput-card">
+        <input type="text">
     </label>
     <label>
         名称:
-        <input type="text" id="add_NameInput-card">
+        <input type="text">
     </label>
     <label>
-        图标名称:
-        <input type="text" id="add_iconInput-card">
+        图标:
+        <input type="text">
     </label>
     <label>
         链接:
-        <input type="text" id="add_hrefput-card">
+        <input type="text">
     </label>
     <label>
         描述:
-        <input type="text" id="add_descriptionInput-card">
+        <input type="text">
     </label>
 </template>
 
