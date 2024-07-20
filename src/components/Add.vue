@@ -1,3 +1,4 @@
+<!-- Add.vue -->
 <template>
   <!-- 添加模态框 -->
   <div class="modal">
@@ -14,59 +15,79 @@
         @update:name="handleUpdateName" 
         @update:icon="handleUpdateIcon" 
         @update:no="handleUpdateNo"
-    />
+        ref="categoryModal"
+      />
 
       <button class="saveButton" @click="saveButton">保存</button>
     </div>
+    <!-- 成功提示组件 -->
+    <SuccessAlert ref="successAlert" />
+
+
   </div>
 </template>
 
 
-<script lang="ts" setup name="Add">
-  import { ref } from 'vue';
-  import { useBookmarks } from '../types/bookmarks.ts';
-  import CategoryModal from './CategoryModal.vue'
-  const { jsonData, addNewCategory } = useBookmarks();
+<script setup lang="ts">
+import { ref, defineProps, defineEmits } from 'vue';
+import CategoryModal from './CategoryModal.vue'
+import SuccessAlert from './SuccessAlert.vue';
+import { useBookmarks } from '../types/bookmarks';
 
+const { jsonData, addNewCategory } = useBookmarks();
 
-  // 删除按钮
-  const props = defineProps({
+// 删除按钮
+const props = defineProps({
     isVisible: Boolean
-  });
-  const close = () => {
-    emit('close');
-  };
-  const emit = defineEmits(['close']);
+});
+const emit = defineEmits(['close']);
 
-  // 保存按钮
-  const categoryName = ref('');
-  const categoryIcon = ref('');
-  const categoryNo = ref('');
+// 定义响应式状态
+const categoryName = ref('');
+const categoryIcon = ref('');
+const categoryNo = ref('');
+const successAlert = ref(null);
+const categoryModal = ref(null); // 确保这里正确声明了 ref
 
-  const handleUpdateName = (value) => {
+const handleUpdateName = (value) => {
     categoryName.value = value;
-  };
-  const handleUpdateIcon = (value) => {
+};
+const handleUpdateIcon = (value) => {
     categoryIcon.value = value;
-  };
-  const handleUpdateNo = (value) => {
+};
+const handleUpdateNo = (value) => {
     categoryNo.value = value;
-  };
+};
 
+const close = () => {
+    emit('close');
+};
 
-  const saveButton = () => {
+const saveButton = () => {
     if (!categoryName.value || !categoryNo.value) {
-      alert('请填写分类名称和序号');
-      return;
+        alert('请填写分类名称和序号');
+        return;
     }
     const newCategory = {
-      categoryNo: categoryNo.value,
-      categoryIcon: categoryIcon.value,
-      categoryName: categoryName.value,
-      items: [] // 初始为空
+        categoryNo: categoryNo.value,
+        categoryIcon: categoryIcon.value,
+        categoryName: categoryName.value,
+        items: [] // 初始为空
     };
     addNewCategory(newCategory);
+
+    // 调用 SuccessAlert 的 showMessage 方法显示提示
+    if (successAlert.value) {
+        console.log("Calling showMessage on successAlert");
+        successAlert.value.showMessage('成功添加');
+    } else {
+        console.log("successAlert is null");
+    }
+
 };
+
+
+
 
 
 </script>
